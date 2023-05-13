@@ -11,7 +11,7 @@ def my_format(x):
     return s
 
 path = Path(__file__).parent /"forest_reg_model.pkl"
-forest_reg = joblib.load(open(path))
+forest_reg = joblib.load(path)
 
 column_names=['longitude','latitude','housing_median_age','total_rooms',
               'total_bedrooms','population','households','median_income',
