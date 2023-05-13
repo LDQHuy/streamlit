@@ -11,7 +11,7 @@ def my_format(x):
     return s
 
 
-forest_reg = joblib.load("forest_reg_model.pkl")
+forest_reg = joblib.load(open('forest_reg_model.pkl', 'rb'))
 
 column_names=['longitude','latitude','housing_median_age','total_rooms',
               'total_bedrooms','population','households','median_income',
