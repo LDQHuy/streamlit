@@ -10,7 +10,7 @@ def my_format(x):
         s = '&nbsp'*(14-L) + s
     return s
 
-path = Path(__file__).parent /"pages/forest_reg_model.pkl"
+path = Path(__file__).parent /"forest_reg_model.pkl"
 forest_reg = joblib.load(path)
 
 column_names=['longitude','latitude','housing_median_age','total_rooms',
