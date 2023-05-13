@@ -2,7 +2,7 @@ import joblib
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+from pathlib import Path
 def my_format(x):
     s = "{:,.0f}".format(x)
     L = len(s)
@@ -10,8 +10,8 @@ def my_format(x):
         s = '&nbsp'*(14-L) + s
     return s
 
-
-forest_reg = joblib.load(open('forest_reg_model.pkl', 'rb'))
+path = Path(__file__).parent /"forest_reg_model.pkl"
+forest_reg = joblib.load(path)
 
 column_names=['longitude','latitude','housing_median_age','total_rooms',
               'total_bedrooms','population','households','median_income',
